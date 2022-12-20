@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <aside>
+      <h2>Топ 10 криптомонет</h2>
+    </aside>
+    <article>
+    <section>
+				<form name="search" class="sinput" action="#" method="get">
+						<input type="searches" name="q" placeholder="Search"><button type="submit">GO</button>
+					</form>
+				<h2>Топ 10 по объему монет</h2>
+            {% for row in processed_files %}
+                <h3>
+                    {{row[0]}}. {{row[0]}}
+                </h3>
+                <p>
+                    Объем: {{row[1]}}
+                </p>
+            {% endfor %}
+        </section>
+        <section>
+            {% for image in imgs %}
+                <figure><img src="/static/images/{{image}}" alt=""></figure>
+            {% endfor %}
+        </section>
+    </article>
+
+{% endblock %}

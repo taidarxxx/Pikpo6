@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <aside>
+      <h2>Все статьи на сайте</h2>
+
+    </aside>
+    <section>
+
+				<h2>Статьи</h2>
+
+        </section>
+        <section>
+            {% for image in imgs %}
+                <figure><img src="/static/images/{{image}}" alt=""></figure>
+            {% endfor %}
+        </section>
+
+{% endblock %}

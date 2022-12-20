@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <aside>
+        <h2>Ваша статья</h2>
+        <p id="statusfield"><img src="/static/images/bg1.png" width="230" height="180" alt="Our offices"></p>
+    </aside>
+    <section>
+        <form id="contactform">
+            <fieldset>
+                <legend>Добавление статьи</legend>
+                <p><label for="fname">Название статьи :     </label><br><input type="text" name="fname"></p>
+                
+                <p><b>Введите содержание статьи:</b></p>
+                <p><textarea rows="10" cols="45" name="reqtext"></textarea></p>
+            </fieldset>
+            <p><input type="submit" id="sendbtn" value="Отправить"></p>
+        </form>		
+    </section>
+    <script type="text/javascript" src="/static/javascripts/formsend.js"></script>
+
+{% endblock %}
